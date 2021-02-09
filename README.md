@@ -1,38 +1,38 @@
-Account
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class Account{
-	protected String accName;
-	protected String acId;
-	protected int balance;
-	
-	Account(){
-	}
-	
-	Account(String accName,String acId,int balance){
-		this.accName=accName;
-		this.acId=acId;
-		this.balance=balance;	
-	}
-	
-	public void deposit(int amount){
-		if(amount<0){
-			Console.WriteLine("Amount can not be negative");
-		}
-		else{
-		balance=balance+amount;
-		Console.WriteLine("Deposited Money: " +amount);
-		}
-	}
+namespace lab_task_3._2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            {
+                int n = 100;
+                int e_sum = 0;
+                int odd_sum = 0;
 
-	public void Withdraw(int amount){
-		if(balance>=amount){
-			balance=balance-amount;
-			Console.WriteLine("Withdrawal Money: " +amount);
-		}
-		else
-		{ Console.WriteLine("Insifficient Balance");
-		}
-	}
+
+                for (int i = 1; i <= n; i++)
+                {
+                    if (i % 2 == 0)
+                    e_sum = e_sum + i; 
+                    else
+                    odd_sum = odd_sum + i;
+
+                }
+                Console.WriteLine(e_sum);
+                Console.WriteLine(odd_sum);
+
+                Console.ReadKey();
+            }
+        }
+    }
+
+}
 	/*public void checkBalance(){
 		Console.WriteLine("Current Balance:" +balance);
 	}*/
